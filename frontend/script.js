@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch('/calculate', {
+            const response = await fetch('/api/calculate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (!response.ok) {
-                throw new Error('Failed to calculate earnings');
+                const errorData = await response.json();
+                throw new Error(errorData.detail || 'Failed to calculate earnings');
             }
 
             const data = await response.json();

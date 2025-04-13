@@ -37,7 +37,7 @@ async def get_styles():
 async def get_script():
     return FileResponse('frontend/script.js')
 
-@app.post("/calculate")
+@app.post("/api/calculate")
 async def calculate_earnings(input_data: PaymentInput):
     try:
         calculator = PaymentCalculator()
