@@ -1,4 +1,5 @@
 # Freelance Payment Calculator
+[Live Link](https://freelance-payment-calculator-8wac897jv-charizard0001s-projects.vercel.app/)
 
 A full-stack application that helps freelancers calculate their earnings in INR based on their hourly rate in USD. The app fetches real-time exchange rates and provides calculations for hourly, daily, weekly, and monthly earnings.
 
